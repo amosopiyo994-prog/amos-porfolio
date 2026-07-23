@@ -65,6 +65,14 @@ function Hero() {
           >
             <FaDownload /> Download CV
           </a>
+
+          <a
+            href="/Amos_Opiyo_Cover_Letter.pdf"
+            download
+            className="btn"
+          >
+            <FaDownload /> Download Cover Letter
+          </a>
         </div>
       </div>
 
