@@ -1,19 +1,39 @@
-import React from "react";
 function Certifications() {
-    return (
-      <section className="certifications" id="certifications" data-aos="flip-up">
-        <h2>🏆 Certifications</h2>
+  const certificates = [
+    {
+      title: "IBM AI Fundamentals",
+      file: "/AI_Fundamentals.pdf",
+    },
+    {
+      title: "Introduction to Artificial Intelligence",
+      file: "/Introduction_to_AI.pdf",
+    },
+    {
+      title: "Machine Learning",
+      file: "/Machine_Learning.pdf",
+    },
+  ];
 
-      <div className="certificate-card">
-        <h3>IBM Certifications</h3>
-        <p>
-          Completed professional courses and certifications in
-          technology, software development, and IT skills.
-        </p>
+  return (
+    <section className="certifications" id="certifications">
+      <h2>🏆 Certifications</h2>
 
-        <button>
-          View Certificates
-        </button>
+      <div className="certifications-container">
+        {certificates.map((cert, index) => (
+          <div className="certificate-card" key={index}>
+            <h3>{cert.title}</h3>
+
+            <a
+              href={cert.file}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="certificate-btn">
+                📄 View Certificate
+              </button>
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );
